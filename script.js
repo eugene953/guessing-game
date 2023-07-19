@@ -21,6 +21,7 @@ while(guessCount < TotalGuesses) {
          
     else {
             alert ("Successfully") ;
+            
             return guessCount + 1;
         } 
 
