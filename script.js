@@ -1,46 +1,43 @@
 
-//let x = numToGuess;
-//let y
+function playGuessingGame(numToGuess,TotalGuesses = 10) {
 
-function playGuessingGame(numToGuess,TotalGuesses) {
-TotalGuesses=10;
+   let guessCount = 0;
+while(guessCount < TotalGuesses) {
+    let guess = prompt("ENTER A NUMBER BETWEEN 1-100");
 
-let guess = prompt("ENTER A NUMBER BETWEEN 1-100");
+     if (isNaN(guess) || guess.trim().length === 0) {
 
-for(let i=1; i<=TotalGuesses; i++) {
+              alert("Please enter a number");
+                     continue;
+        }
 
-    if (guess=null)
+    else if(guess < numToGuess) {
+            alert( guess + ' is too small' );
+       }
+
+    else if(guess > numToGuess) {
+           alert( guess + ' is too large');
+       }
+         
+    else {
+            alert ("Successfully") ;
+            return guessCount + 1;
+        } 
+
+     guessCount++
+    }
+
+  if (guessCount >= TotalGuesses)
+  {
+    alert('Opp!! you are out of guesses!');
     return 0;
-
-   else if (guess==numToGuess)
-    {
-        alert ("Successfully") ;
-
-        break ;
-        // return i;
-    }else if(guess<numToGuess) {
-                guess = prompt( guess + ' is too small' );
-            }
-            else if(guess>numToGuess) {
-                guess = prompt( guess + ' is too large');
-            }
-if (isNaN(guess) || str.length === 0) {
-  
-
-guess = prompt("Please enter a number");
-
-i++
-
-}
-
-
-
-
+  }
 
 
 }
+
  
 
-}
+
 
 
